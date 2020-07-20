@@ -13,6 +13,7 @@ addButton.addEventListener("click", () => {
     <span>X</span>
   `;
   ul.appendChild(note);
+  input.value = "";
 
   remove = note.childNodes[3];
   remove.addEventListener("click", (e) => {

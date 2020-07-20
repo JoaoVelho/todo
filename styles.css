@@ -6,11 +6,18 @@
 
 body {
   display: flex;
+  flex-direction: column;
   height: 100vh;
   justify-content: center;
   align-items: center;
   background-color: #242423;
   font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  color: #ecc047;
+  margin-bottom: 30px;
+  font-size: 3em;
 }
 
 .content {
@@ -24,7 +31,7 @@ body {
   overflow-y: auto;
 }
 
-.header {
+form {
   width: 90%;
   margin: 15px;
   align-self: center;
@@ -61,13 +68,14 @@ ul {
 }
 
 .note {
-  margin: 5px;
+  margin: 5px 10px;
   padding: 5px 20px;
   border-radius: 10px;
   border: solid 1.2px #071e3d;
   background-color: #f5cb5c;
   display: grid;
   grid-template-columns: repeat(20, 5%);
+  transition-duration: 1s;
 }
 
 li {
@@ -78,13 +86,21 @@ li {
 }
 
 span {
+  font-weight: bold;
   grid-column-start: 18;
   grid-column-end: span 3;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  transition-duration: 700ms;
 }
 
 span:hover,
 button:hover {
   cursor: pointer;
+}
+
+span:hover {
+  color: rgb(219, 2, 2);
+  transition-duration: 400ms;
 }
